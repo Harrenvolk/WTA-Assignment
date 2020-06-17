@@ -10,5 +10,4 @@
     *npm start* within the Back End Folder
  5. Initialize the Angular App
     *npm start* within the Front End Folder
- 
- #####**URL** *`http://localhost:4200`* 
+**URL** *`http://localhost:4200`* 
