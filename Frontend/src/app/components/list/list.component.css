@@ -1,0 +1,12 @@
+table {
+    background-color:#d4d4d4;
+    width: 100%;
+}
+
+.mat-column-right {
+    text-align: center;
+}
+
+#parent {
+    margin:20px 20%;
+  }

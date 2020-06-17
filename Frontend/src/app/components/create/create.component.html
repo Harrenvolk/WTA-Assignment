@@ -1,0 +1,37 @@
+<div id="parent">
+  <br>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Generate a Review</h3>
+    </section>
+    <mat-divider></mat-divider>
+    <br>
+    <form [formGroup]="createForm" class="create-form">
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Employee Name" formControlName="title" #title>
+        <!--<mat-error *ngIf="createForm.controls['title'].errors.required">
+          Title is <strong>required</strong>
+        </mat-error>-->
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <input matInput placeholder="Employee ID" formControlName="responsible" #responsible>
+      </mat-form-field>
+      <mat-form-field class="field-full-width">
+        <textarea matInput placeholder="Additional Remarks" formControlName="description" #description></textarea>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-select placeholder="Overall Rating" formControlName="severity" #severity>
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4</mat-option>
+            <mat-option value="5">5</mat-option>
+          </mat-select>
+      </mat-form-field>
+      <mat-divider></mat-divider>
+      <br><br>
+      <button mat-mini-fab color="" routerLink="/list">←</button>&nbsp;
+      <button type="submit" (click)="addIssue(title.value, responsible.value, description.value, severity.value)" [disabled]="createForm.pristine || createForm.invalid" mat-mini-fab color="primary"> 💾 </button>
+    </form>
+  </mat-card>
+</div>
